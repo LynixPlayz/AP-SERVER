@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="passcode-container">
+        <h1>Enter Passcode</h1>
+        <div class="passcode-input">
+            <input type="text" id="passcode" readonly>
+        </div>
+        <div class="keypad">
+            <button onclick="addToPasscode(1)">1</button>
+            <button onclick="addToPasscode(2)">2</button>
+            <button onclick="addToPasscode(3)">3</button>
+            <button onclick="addToPasscode(4)">4</button>
+            <button onclick="clearPasscode()">Clear</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
