@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AUTHENTICATOR</title>
+    <style>
+        body {
+            background-color: rgb(10, 10, 10);
+        }
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h4 {
+            font-family: Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <p id="output"></p>
+    <h1 style="color:rgb(0, 0, 255);">LOC by AP</h1>
+    <h4 style="color:rgb(0, 0, 255);">PLEASE ENTER ID</h4>
+    <form action="submit_page.html" method="post">
+        <input type="text" name="passcode" id="passcode" placeholder="ID-XXXXXXXX" />
+        <br>
+        <input type="submit" value="ENTER" />
+        <script>
+
+        if (passcode = AP-93646123) {
+            document.getElementById('output').textContent = 'The condition is true.';
+        } else {
+            document.getElementById('output').textContent = 'The condition is false.';
+        }
+        </script>
+    </form>
+</body>
+</html>
