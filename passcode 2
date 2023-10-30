@@ -18,16 +18,21 @@
     <p id="output"></p>
     <h1 style="color:rgb(0, 0, 255);">LOC by AP</h1>
     <h4 style="color:rgb(0, 0, 255);">PLEASE ENTER ID</h4>
-    <form action="submit_page.html" method="post">
-        <input type="text" name="passcode" id="passcode" placeholder="ID-XXXXXXXX" />
-        <br>
-        <input type="submit" value="ENTER" />
-        <script>
+    <h1>Enter Your Passcode</h1>
+    <input type="password" id="passcodeInput" placeholder="Enter Passcode" />
+    <button id="submitButton" style="display: none;" onclick="checkPasscode()">Submit</button>
+    <p id="message"></p>
+<script>
+function checkPasscode() {
+            var passcode = document.getElementById("passcodeInput").value;
+            var correctPasscode = "1234"; // Replace with your correct passcode
 
-        if (passcode = AP-93646123) {
-            document.getElementById('output').textContent = 'The condition is true.';
-        } else {
-            document.getElementById('output').textContent = 'The condition is false.';
+            if (passcode === correctPasscode) {
+                document.getElementById("message").textContent = "Passcode is correct!";
+                document.getElementById("submitButton").style.display = "block"; // Show the "Submit" button
+            } else {
+                document.getElementById("message").textContent = "Passcode is incorrect. Please try again.";
+            }
         }
         </script>
     </form>
