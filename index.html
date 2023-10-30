@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Passcode Entry</title>
+    <title>AUTHENTICATOR</title>
+    <style>
+        body {
+            background-color: rgb(10, 10, 10);
+        }
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h4 {
+            font-family: Courier, monospace;
+        }
+    </style>
 </head>
 <body>
-    <h1>Enter Your Passcode</h1>
+    <p id="output"></p>
+    <h1 style="color:rgb(0, 0, 255);">LOC by AP</h1>
+    <h4 style="color:rgb(0, 0, 255);">PLEASE ENTER ID</h4>
     <input type="password" id="passcodeInput" placeholder="Enter Passcode" />
     <button id="submitButton" style="display: none;" onclick="checkPasscode()">Submit</button>
     <p id="message"></p>
-
-    <script>
-        function checkPasscode() {
+<script>
+function checkPasscode() {
             var passcode = document.getElementById("passcodeInput").value;
-            var correctPasscode = "HAT"; // Replace with your correct passcode
+            var correctPasscode = "1234"; // Replace with your correct passcode
 
             if (passcode === correctPasscode) {
                 document.getElementById("message").textContent = "Passcode is correct!";
@@ -21,6 +33,6 @@
                 document.getElementById("message").textContent = "Passcode is incorrect. Please try again.";
             }
         }
-    </script>
+        </script>
 </body>
 </html>
