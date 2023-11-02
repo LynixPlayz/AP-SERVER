@@ -19,10 +19,13 @@
     <h1 style="color:rgb(0, 0, 255);">LOC by AP</h1>
     <h4 style="color:rgb(0, 0, 255);">PLEASE ENTER ID</h4>
     <input type="password" id="passcodeInput" placeholder="XX-00000000" />
-    <button id="submitButton" style="display: none;" onclick="checkPasscode()">Submit</button>
+    <button id="submitButton" style="display: none;">Submit</button>
     <p id="message"></p>
-<script>
-function checkPasscode() {
+
+    <script>
+        document.getElementById("submitButton").addEventListener("click", checkPasscode);
+
+        function checkPasscode() {
             var passcode = document.getElementById("passcodeInput").value;
             var correctPasscode = "1234"; // Replace with your correct passcode
 
@@ -33,6 +36,6 @@ function checkPasscode() {
                 document.getElementById("message").textContent = "Passcode is incorrect. Please try again.";
             }
         }
-        </script>
+    </script>
 </body>
 </html>
