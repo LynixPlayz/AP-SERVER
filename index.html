@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>ERROR</title>
-        <style>
-          body {
-              background-color: rgb(30, 30, 30);
-          }
-      </style>
-      </head>
+<head>
+    <title>Passcode Entry</title>
+</head>
 <body>
+    <h1>Enter Your Passcode</h1>
+    <input type="password" id="passcodeInput" placeholder="Enter Passcode" />
+    <button id="submitButton" style="display: block;" onclick="checkPasscode()">Submit</button>
+    <p id="message"></p>
 
-  <h1 style="color:rgb(255, 0, 0);">ERROR: 404</h1>
-  <h2 style="color:rgb(255, 0, 0);">CONNECTION TERMINATED</h2>
+    <script>
+        function checkPasscode() {
+            var passcode = document.getElementById("passcodeInput").value;
+            var correctPasscode = "1234"; // Replace with your correct passcode
 
+            if (passcode === correctPasscode) {
+                document.getElementById("message").textContent = "Passcode is correct!";
+            } else {
+                document.getElementById("message").textContent = "Passcode is incorrect. Please try again.";
+            }
+        }
+    </script>
 </body>
 </html>
