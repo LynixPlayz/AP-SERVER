@@ -5,19 +5,19 @@
 </head>
 <body>
     <h1>Enter Your Passcode</h1>
-    <input type="password" id="passcodeInput" placeholder="Enter Passcode" />
+    <input type="password" id="passcodeInput" placeholder="Enter SID or given passcode." />
     <button id="submitButton" style="display: block;" onclick="checkPasscode()">Submit</button>
     <p id="message"></p>
 
     <script>
         function checkPasscode() {
             var passcode = document.getElementById("passcodeInput").value;
-            var correctPasscode = "1234"; // Replace with your correct passcode
+            var correctPasscode = "01740728936519"; // Replace with your correct passcode
 
             if (passcode === correctPasscode) {
-                document.getElementById("message").textContent = "Passcode is correct!";
+                document.getElementById("message").textContent = "Loading SID...";
             } else {
-                document.getElementById("message").textContent = "Passcode is incorrect. Please try again.";
+                document.getElementById("message").textContent = "SID is incorrect.";
             }
         }
     </script>
