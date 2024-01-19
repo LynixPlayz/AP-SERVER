@@ -13,22 +13,8 @@
         function checkPasscode() {
             var passcode = document.getElementById("passcodeInput").value;
             var correctPasscode = "01740728936519"; // Replace with your correct passcode
-
             if (passcode === correctPasscode) {
-                
-                import { lineWobble } from 'ldrs'
-
-lineWobble.register()
-
-// Default values shown
-<l-line-wobble
-  size="80"
-  stroke="5"
-  bg-opacity="0.1"
-  speed="1.75" 
-  color="black" 
-></l-line-wobble>
-                
+                document.getElementById("message").textContent = "Loading SID...";
             } else {
                 document.getElementById("message").textContent = "SID is incorrect.";
             }
