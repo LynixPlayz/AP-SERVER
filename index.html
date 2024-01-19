@@ -15,7 +15,7 @@
             var correctPasscode = "01740728936519"; // Replace with your correct passcode
 
             if (passcode === correctPasscode) {
-                document.getElementById("message").textContent = "Loading SID...";
+                
                 import { lineWobble } from 'ldrs'
 
 lineWobble.register()
@@ -28,7 +28,7 @@ lineWobble.register()
   speed="1.75" 
   color="black" 
 ></l-line-wobble>
-                document.getElementById("message").textContent = "Hello, ALEX PENNY";
+                
             } else {
                 document.getElementById("message").textContent = "SID is incorrect.";
             }
