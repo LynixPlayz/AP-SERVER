@@ -12,12 +12,7 @@
         h4 {
             font-family: Courier, monospace;
         }
-    </style>
-    <script type="module">
-        import { lineWobble } from 'ldrs';
-
-        lineWobble.register();
-    </script>
+    
 </head>
 <body>
     <h1 style="color:rgb(0, 0, 255);">LOC by AP</h1>
@@ -25,14 +20,7 @@
     <input type="password" id="passcodeInput" placeholder="00-00-00:XXXXXXXXXX" />
     <button id="submitButton" style="display: block;" onclick="checkPasscode()">Submit</button>
     <p id="message"></p>
-
-    <l-line-wobble
-      size="80"
-      stroke="5"
-      bg-opacity="0.1"
-      speed="1.75" 
-      color="black" 
-    ></l-line-wobble>
+<span class="loader"></span>
 
     <script>
         function checkPasscode() {
