@@ -16,6 +16,7 @@
     
 </head>
 <body>
+    <div class="loader"></div>
     <h1 style="color:rgb(0, 0, 255);">LOC by AP</h1>
     <h4 style="color:rgb(0, 0, 255);">PLEASE ENTER SID</h4>
     <input type="password" id="passcodeInput" placeholder="00-00-00:XXXXXXXXXX" />
@@ -28,8 +29,6 @@
             var correctPasscode = "00-00-00:#PASS-THU#"; // Replace with your correct passcode
             if (passcode === correctPasscode) {
                 document.getElementById("message").textContent = "Loading SID...";
-         <div class="loader"></div>
-        
                } else {
                 document.getElementById("message").textContent = "SID is incorrect.";
             }
